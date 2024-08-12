@@ -40,7 +40,7 @@ function speak(){
   
     function check()
     {
-      img = document.getElementById('captured_image');
+      img = document.getElementById('captured_img');
       classifier.classify(img, gotResult);
     }
 
@@ -48,7 +48,7 @@ function speak(){
     {
       if(error)
       {
-        console.error(error)
+        console.error(error);
       }
       else
       {
@@ -57,7 +57,7 @@ function speak(){
         document.getElementById("resultGestureName2").innerHTML = results[1].label;
         prediction1 = results[0].label;
         prediction2 = results[1].label;
-        speak()
+        speak();
       if(results[0].label == "joinha")
       {
         document.getElementById("updateEmoji").innerHTML = "&#128077;";
